@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contacts</a>
+        </nav>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="content">
+        <h2>Projects</h2>
+        <p>Here are my school projects, where I work on various IoT, AI, and web development applications.</p>
+        <p>(Click on a project to view details.)</p>
+
+        <div class="projects-container">
+            <div class="project-item" onclick="openModal('Fish Farm Feeder', 'assets/images/FishFarmFeeder.jpg', 'An automated feeding system for fish farms that dispenses food at scheduled intervals, optimizing feeding efficiency and reducing waste.')">
+                <img src="assets/images/FishFarmFeeder.jpg" alt="Project 1">
+            </div>
+            <div class="project-item" onclick="openModal('Dashboard', 'assets/images/Dashboard.jpg', 'This is the Website and Application for the Fish Farm Feeder wherein it displays various reading, which are crucial for fish farming')">
+                <img src="assets/images/Dashboard.jpg" alt="Project 2">
+            </div>
+            <div class="project-item" onclick="openModal('Line Follower', 'assets/images/LineFollower.jpg', 'A robot that follows a predefined path using infrared or optical sensors, often used for automation and robotics learning.')">
+                <img src="assets/images/LineFollower.jpg" alt="Project 3">
+            </div>
+            <div class="project-item" onclick="openModal('SumoBot', 'assets/images/SumoBot.jpg', 'A small autonomous robot designed for sumo-style competitions, using sensors and motors to detect and push opponents out of the ring.')">
+                <img src="assets/images/SumoBot.jpg" alt="Project 4">
+            </div>
+            <div class="project-item" onclick="openModal('Digital Signal Processing', 'assets/images/DSP.jpg', 'A project focused on processing and analyzing signals (audio, images, or sensor data) using DSP algorithms for filtering, transformation, or enhancement.')">
+                <img src="assets/images/DSP.jpg" alt="Project 5">
+            </div>
+            <div class="project-item" onclick="openModal('Automated Aquarium', 'assets/images/Aquarium.jpg', 'A smart aquarium system that maintains water temperature, pH levels, and lighting automatically, ensuring a healthy environment for aquatic life.')">
+                <img src="assets/images/Aquarium.jpg" alt="Project 6">
+            </div>
+            <div class="project-item" onclick="openModal('Elevator', 'assets/images/Elevator.jpg', 'A miniature elevator model with programmed logic for floor selection, movement control, and safety features, simulating real-world elevator operations.')">
+                <img src="assets/images/Elevator.jpg" alt="Project 7">
+            </div>
+            <div class="project-item" onclick="openModal('School Rfid', 'assets/images/Rfid.jpg', 'An RFID-based attendance and access control system for schools, allowing automated student and staff tracking for security and monitoring.')">
+                <img src="assets/images/Rfid.jpg" alt="Project 8">
+            </div>
+            <div class="project-item" onclick="openModal('Temperature Monitor', 'assets/images/HumidityTemp.jpg', 'A real-time temperature monitoring system using sensors to track and display temperature readings, useful for environmental and industrial applications.')">
+                <img src="assets/images/HumidityTemp.jpg" alt="Project 9">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="project-modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <img id="modalImage" src="" alt="">
+            <p class="project-description" id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; This is my 2024 Portfolio, some information maybe invalid or outdated.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

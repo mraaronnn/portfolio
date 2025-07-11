@@ -1,0 +1,574 @@
+/* Reset & General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+
+/* Header and Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #ffd700, #ffa500);
+    position: relative; /* Allow scrolling */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Navigation Links */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover {
+    background-color: #ffd700;
+    color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    background-color: #ffd700;
+    color: #000000;
+}
+
+/* Hero Section Button */
+.hero .btn {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn:hover {
+    background-color: #ffd700;
+    color: #000000;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* About Me Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+/* Left Side */
+.left {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.left h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.left .btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left .btn:hover {
+    background-color: #ffd700;
+    color: #000000;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* Right Side - Circular Profile Image */
+.right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Profile Image */
+.profile-img:hover {
+    transform: scale(1.15);
+}
+
+/* Full Image Modal */
+.full-image-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000; /* Higher than other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.full-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Projects Grid */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3x3 Grid */
+    gap: 20px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.project-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px hsla(56, 100%, 50%, 0.25);
+}
+
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+.project-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.project-modal img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-description {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    color: black;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 900px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Get in Touch (Left) */
+.contact-info {
+    width: 48%;
+    text-align: left;
+}
+
+.contact-info  h2 {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Follow Me (Right) */
+.social-buttons {
+    width: 48%;
+    text-align: right;
+}
+
+/* Social Icons */
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap; /* Prevents icons from being cut off */
+}
+
+/* General Social Icons */
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.social-buttons img[alt="LinkedIn"] {
+    width: 43px; /* Adjust size as needed */
+    height: 43px;
+}
+
+.social-buttons img[alt="Facebook"] {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+}
+
+.social-buttons img[alt="Instagram"] {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+}
+
+.social-buttons {
+    margin-bottom: 120px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+    margin-left: -30px; /* Moves it to the left */
+
+}
+
+.social-buttons h2 {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Bubble effect on hover */
+.social-buttons .buttons a:hover {
+    transform: scale(1.2); /* Slightly enlarges the icon */
+    filter: drop-shadow(0px 0px 10px rgba(255, 238, 0, 0.459)); /* Adds a glowing effect */
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+    padding: 50px;
+    background: linear-gradient(to right, #f4f4f4 50%, #ffffff 50%);
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    background-color: #f4b900;
+    border-radius: 5px;
+}
+
+.hero-text .btn.secondary {
+    background: transparent;
+    border: 2px solid black;
+}
+
+.hero .hero-image {
+    position: absolute;
+    right: -5%; /* Move it slightly to the right */
+    top: -10%; /* Move it slightly upward */
+    width: 50%; /* Adjust width */
+    height: 100%;
+    background: #ffffff;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 20% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .hero-image img {
+    width: 90%; /* Increase the width slightly */
+    height: auto;
+    object-fit: cover;
+    transform: translateX(10px); /* Move it further right */
+}
+.projects {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f9fc;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+    width: 50%;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ffcc00;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #ffb700;
+}
+
+
+.projects {
+    text-align: center;
+}
+
+.projects h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    display: flex;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-text {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.project-text p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.project-image {
+    width: 50%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
